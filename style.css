@@ -1,3 +1,4 @@
+
  * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: #1a1a1a; }
   .site { font-family: 'Segoe UI', sans-serif; background: #1a1a1a; color: #fff; min-height: 100vh; }
@@ -13,10 +14,10 @@
     z-index: 0;
   }
   .page-bg-logo img {
-    width: min(800px, 100vw);
+    width: min(900px, 100vw);
     height: min(800px, 100vw);
     object-fit: contain;
-    opacity: 0.05;
+    opacity: 0.02;
     filter: grayscale(100%) brightness(4);
     transition: opacity 0.6s ease;
   }
@@ -46,13 +47,13 @@
   .nav-links { display: flex; gap: 28px; }
   .nav-links a { color: #aaa; font-size: 14px; text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: #fff; }
-  .nav-cta { background: linear-gradient(135deg, #e0e0e0, #888); color: #000; border: none; padding: 10px 22px; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+  .nav-cta { background: linear-gradient(135deg, #9d711e, #0b0b0b); color: #000; border: none; padding: 10px 22px; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
   .nav-cta:hover { background: linear-gradient(135deg, #fff, #aaa); }
 
   /* HERO */
   .hero {
     text-align: center;
-    padding: 80px 40px 60px;
+    padding: 90px 60px 70px;
     position: relative;
     overflow: hidden;
     background: #1a1a1a;
@@ -68,9 +69,9 @@
   }
   .hero-bg-logo img {
     width: min(700px, 110vw);
-    height: min(700px, 110vw);
+    height: min(800px, 110vw);
     object-fit: contain;
-    opacity: 0.07;
+    opacity: 0.18;
     filter: grayscale(100%) brightness(3);
   }
   .hero::after {
@@ -89,9 +90,9 @@
   .hero h1 span { color: #c8c8c8; text-shadow: 0 0 30px rgba(255,255,255,0.2); }
   .hero p { font-size: 17px; color: #888; max-width: 520px; margin: 0 auto 36px; line-height: 1.7; }
   .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .btn-gold { background: linear-gradient(135deg, #e0e0e0, #888); color: #000; border: none; padding: 14px 30px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
+  .btn-gold { background: linear-gradient(135deg, #9d711e, #090909); color: #000; border: none; padding: 14px 30px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
   .btn-gold:hover { background: linear-gradient(135deg, #fff, #aaa); transform: translateY(-1px); }
-  .btn-outline { background: transparent; color: #fff; border: 1px solid #444; padding: 14px 30px; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
+  .btn-outline { background: linear-gradient(135deg, #9d711e, #121212); color: #000; border: none; padding: 14px 30px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
   .btn-outline:hover { border-color: #888; }
 
   /* STATS */
@@ -106,7 +107,228 @@
   .section-title { text-align: center; font-size: 32px; font-weight: 800; margin-bottom: 10px; }
   .section-title span { color: #c0c0c0; }
   .section-sub { text-align: center; color: #666; font-size: 15px; margin-bottom: 52px; }
+/* ── SPLIT PLATFORM SECTION ── */
+    .platform-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
+    .platform-side {
+      padding: 60px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* INSTAGRAM */
+    .platform-side.ig-side {
+      background: rgba(52, 50, 50, 0.06);
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .platform-side.ig-side::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: -80px;
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .platform-side.ig-side::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -60px;
+      width: 280px; height: 280px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* TIKTOK */
+    .platform-side.tt-side {
+      background: rgba(52,50,50,0.06);
+    }
+    .platform-side.tt-side::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -80px;
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(52,50,50,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .platform-side.tt-side::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -60px;
+      width: 280px; height: 280px;
+      background: radial-gradient(circle, rgba(52,50,50,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* platform header */
+    .platform-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .platform-icon-wrap {
+      width: 48px; height: 48px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 24px;
+    }
+    .ig-icon-wrap {
+      background: radial-gradient(circle at 30% 107%, #3f3f3f 0%, #3f3f3e 5%, #3f3f3f 45%, #3f3f3f 60%, #3f3f3f 90%);
+    }
+    .tt-icon-wrap {
+      background: #111;
+      border: 1px solid #0a0909;
+    }
+    .platform-header-text h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin: 0 0 2px;
+    }
+    .platform-header-text p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.1);
+      margin: 0;
+      letter-spacing: 0.04em;
+    }
+
+    /* cards inside split */
+    .platform-side .bundles {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .platform-side .bundle-card {
+      background: rgba(52,50,50,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 22px 24px;
+      position: relative;
+    }
+    .platform-side .bundle-card.featured {
+      border-color: rgba(255,255,255,0.1);
+    }
+    .platform-side .bundle-name { font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 2px; }
+    .platform-side .bundle-tagline { font-size: 11px; color: rgba(234, 224, 224, 0.951); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+    .platform-side .bundle-price { font-size: 36px; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 2px; }
+    .platform-side .bundle-price sup { font-size: 18px; font-weight: 400; vertical-align: super; }
+    .platform-side .bundle-period { font-size: 12px; color: rgb(243, 236, 236); margin-bottom: 14px; }
+    .platform-side .bundle-divider { border: none; border-top: 1px solid rgb(252, 248, 248); margin: 14px 0; }
+    .platform-side .bundle-features { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+    .platform-side .bundle-features li { font-size: 13px; color: rgb(242, 237, 237); display: flex; align-items: center; gap: 8px; }
+
+    /* IG dot */
+    .ig-side .bundle-features li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      flex-shrink: 0;
+    }
+    /* TT dot */
+    .tt-side .bundle-features li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #2c2d2d;
+      flex-shrink: 0;
+    }
+
+    /* buttons inside split */
+    .platform-side .bundle-btn {
+      width: 100%;
+      padding: 11px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      letter-spacing: 0.04em;
+    }
+    .ig-side .bundle-btn-outline {
+      background: linear-gradient(90deg, rgba(240, 165, 24, 0.539), #0c0c0c);
+      border: 1px solid rgba(240,165,24,0.539);
+      color: #fff;
+    }
+    .ig-side .bundle-btn-gold {
+      background: linear-gradient(90deg, rgba(240, 165, 24, 0.539), #0c0c0c);
+      color: #fff;
+    }
+    .tt-side .bundle-btn-outline {
+      background: transparent;
+      border: 1px solid rgba(240,165,24,0.3);
+      color: #0b0b0b;
+    }
+    .tt-side .bundle-btn-gold {
+      background: rgba(240,165,24,0.3);
+      color: #000;
+    }
+
+    /* featured badge */
+    .platform-side .featured-badge {
+      position: absolute;
+      top: -1px; right: 16px;
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.7);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 0 0 8px 8px;
+    }
+
+    /* empty placeholder */
+    .tt-empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+      gap: 12px;
+      opacity: 0.3;
+      position: relative;
+      z-index: 1;
+    }
+    .tt-empty-icon { font-size: 40px; }
+    .tt-empty-text { font-size: 13px; color: rgb(247, 246, 246); text-align: center; letter-spacing: 0.04em; line-height: 1.6; }
+
+    @media screen and(orientation:landscape) {
+      .platform-split { grid-template-columns: 1fr; }
+      .platform-side.ig-side { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .platform-side { padding: 40px 24px; }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   /* BUNDLES */
   .bundles { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
   .bundle-card { background: #1e1e1e; border: 1px solid #222; border-radius: 16px; padding: 28px 24px; transition: all 0.25s; position: relative; }
