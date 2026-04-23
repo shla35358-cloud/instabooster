@@ -302,33 +302,6 @@
     }
     .tt-empty-icon { font-size: 40px; }
     .tt-empty-text { font-size: 13px; color: rgb(247, 246, 246); text-align: center; letter-spacing: 0.04em; line-height: 1.6; }
-
-    @media screen and(orientation:landscape) {
-      .platform-split { grid-template-columns: 1fr; }
-      .platform-side.ig-side { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-      .platform-side { padding: 40px 24px; }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   /* BUNDLES */
   .bundles { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
   .bundle-card { background: #1e1e1e; border: 1px solid #222; border-radius: 16px; padding: 28px 24px; transition: all 0.25s; position: relative; }
@@ -393,12 +366,42 @@
   .footer { border-top: 1px solid #2a2a2a; padding: 28px 40px; text-align: center; color: #333; font-size: 13px; position: relative; overflow: hidden; }
   .footer span { color: #c0c0c0; }
 
-  @media (max-width: 680px) {
-    .nav { padding: 14px 20px; }
-    .nav-links { display: none; }
-    .section { padding: 50px 20px; }
-    .stats { flex-wrap: wrap; }
-    .stat { border-right: none; border-bottom: 1px solid #2a2a2a; padding: 20px 30px; }
-    .hero { padding: 60px 20px 50px; }
-    .how-section { padding: 50px 20px; }
+ /* Mobile fix - portrait */
+@media screen and (max-width: 768px) {
+  .platform-split {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
   }
+
+  .platform-side {
+    width: 100% !important;
+    padding: 20px 16px !important;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Fix tab headers */
+  .platform-tabs {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .platform-tab {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .platform-tab h2 {
+    font-size: 14px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
