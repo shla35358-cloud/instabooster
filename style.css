@@ -368,6 +368,23 @@
 
 /* Fix navbar on mobile */
 @media screen and (max-width: 768px) {
+	.platform-tab {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 16px !important;
+  }
+
+  .platform-tab h2 {
+    font-size: 16px !important;
+    white-space: nowrap !important;
+  }
+
+  .platform-tab p {
+    font-size: 12px !important;
+  }
   nav {
     display: flex !important;
     align-items: center !important;
@@ -441,6 +458,7 @@
   .how-step h3 {
     font-size: 12px !important;
   }
+	
 }
 html, body {
   width: 100% !important;
