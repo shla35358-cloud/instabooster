@@ -1,4 +1,4 @@
-  const logoSrc = 'logo.JPEG';
+  const logoSrc = './logo.jpeg';
   document.getElementById('nav-logo-img').src = logoSrc;
   document.getElementById('hero-bg-img').src = logoSrc;
   document.getElementById('footer-logo').src = logoSrc;
